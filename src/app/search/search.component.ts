@@ -12,6 +12,7 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   getStock(stockName: string): void {
@@ -21,5 +22,4 @@ export class SearchComponent implements OnInit {
       }
     }
   }
-
 }

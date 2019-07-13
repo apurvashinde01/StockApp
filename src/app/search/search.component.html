@@ -7,8 +7,9 @@
     </a>
     <div class="uk-navbar-item">
       <form action="javascript:void(0)">
-        <input class="uk-input uk-form-width-medium" type="text" placeholder="ENTER STOCK NAME" #stockName>
-        <button class="uk-button uk-button-default" (click)="getStock(stockName.value)">Predict</button>
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="STOCK NAME" #stockName>
+        <button class="uk-button uk-button-default"
+          (click)="getStock(stockName.value); stockName.value=''">Predict</button>
       </form>
     </div>
 
@@ -22,7 +23,24 @@
   </div>
 </nav>
 
-<!--display component
+<h1>{{this.currentStock.name}}</h1>
+<h1>{{this.currentStock.price}}</h1>
+<h1>{{this.currentStock.d1}}</h1>
+<h1>{{this.currentStock.d2}}</h1>
+<h1>{{this.currentStock.d3}}</h1>
+<h1>{{this.currentStock.d4}}</h1>
+<h1>{{this.currentStock.currency}}</h1>
+
+<!--
+
+  <div class="pastSearches">
+  Past Searches
+  <table border="1">
+    <tr *ngFor="let item of items"></tr>
+
+  </table>
+</div>
+
     <div class="jumbotron jumbotron-fluid"
         style="margin-top: 0px ; margin-bottom: 0px; background-color: rgb(109, 201, 243)">
         <div class="container">
@@ -31,38 +49,25 @@
             <button class="uk-button uk-button-default" style="border-color: rgb(55, 67, 241);">Help</button>
         </div>
     </div>
--->
 
-<!--display compnent on search-->
-<table *ngIf="this.currentStock !== undefined" class="table table-bordered"
-  style="margin-bottom: 0px; background-color: rgb(223, 245, 255)">
+
+
+<table *ngIf="this.currentStock !== undefined" class="table table-bordered" style="margin-bottom: 0px; background-color: rgb(223, 245, 255)">
   <thead>
     <tr>
       <th scope="col" colspan="2" style="text-align: center">
-        <!--logo instertion-->
+       
       </th>
       <th scope="col" style="text-align: center">d1</th>
       <th scope="col" style="text-align: center">d2</th>
       <th scope="col" style="text-align: center">d3</th>
       <th scope="col" style="text-align: center">d4</th>
-      <th scope="col" style="text-align: center">d5</th>
       <th scope="col" style="text-align: center">prediction</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">Company Name : {{this.currentStock.name}}</td>
-      <td> {{this.currentStock.d1}}</td>
-      <td> {{this.currentStock.d2}}</td>
-      <td> {{this.currentStock.d3}}</td>
-      <td> {{this.currentStock.d4}}</td>
-      <td> {{this.currentStock.d5}}</td>
-      <td> {{this.currentStock.price}}</td>
-
-    </tr>
-    <tr>
-      <td colspan="2">Price : </td>
-      <td></td>
+      <td style="text-align: center" colspan="2">Company Name : {{this.currentStock.name}}</td>
       <td></td>
       <td></td>
       <td></td>
@@ -70,8 +75,15 @@
       <td></td>
     </tr>
     <tr>
-      <td colspan="2">Currency : </td>
-      <td></td>
+      <td style="text-align: center" colspan="2">Price : {{this.currentStock.price}}</td>
+      <td style="text-align: center"> {{this.currentStock.d1}}</td>
+      <td style="text-align: center"> {{this.currentStock.d2}}</td>
+      <td style="text-align: center"> {{this.currentStock.d3}}</td>
+      <td style="text-align: center"> {{this.currentStock.d4}}</td>
+      <td style="text-align: center"> {{this.currentStock.price}}</td>
+    </tr>
+    <tr>
+      <td style="text-align: center" colspan="2">Currency : {{this.currentStock.currency}} </td>
       <td></td>
       <td></td>
       <td></td>
@@ -80,3 +92,5 @@
     </tr>
   </tbody>
 </table>
+
+-->

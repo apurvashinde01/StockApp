@@ -5,7 +5,6 @@ export class Stock {
     d2: number;
     d3: number;
     d4: number;
-    d5: number;
     currency: string; // score of player
     // industry: string; // stock company's industry
     searchTime: string; // search history time
