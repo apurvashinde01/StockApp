@@ -1,0 +1,82 @@
+<!--search component-->
+<nav class="uk-navbar-container" uk-navbar style="color: white;  background-color: rgb(55, 67, 241)">
+  <div class="uk-navbar-left">
+    <a href="#">
+      <img src="https://img.icons8.com/pastel-glyph/64/000000/bullish.png"
+        style="margin-left: 30px; margin-right: 20px; height: 40px; width: 40px;">
+    </a>
+    <div class="uk-navbar-item">
+      <form action="javascript:void(0)">
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="ENTER STOCK NAME" #stockName>
+        <button class="uk-button uk-button-default" (click)="getStock(stockName.value)">Predict</button>
+      </form>
+    </div>
+
+  </div>
+  <div class="uk-navbar-right">
+    <div class="uk-navbar-item">
+      <div>Welcome User</div>
+      <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"
+        style="margin-left: 30px; margin-right: 20px;">
+    </div>
+  </div>
+</nav>
+
+<!--display component
+    <div class="jumbotron jumbotron-fluid"
+        style="margin-top: 0px ; margin-bottom: 0px; background-color: rgb(109, 201, 243)">
+        <div class="container">
+            <h1 class="display-4">Hello there!</h1>
+            <p class="lead">Keep predicting stocks, we are here to help </p>
+            <button class="uk-button uk-button-default" style="border-color: rgb(55, 67, 241);">Help</button>
+        </div>
+    </div>
+-->
+
+<!--display compnent on search-->
+<table *ngIf="this.currentStock !== undefined" class="table table-bordered"
+  style="margin-bottom: 0px; background-color: rgb(223, 245, 255)">
+  <thead>
+    <tr>
+      <th scope="col" colspan="2" style="text-align: center">
+        <!--logo instertion-->
+      </th>
+      <th scope="col" style="text-align: center">d1</th>
+      <th scope="col" style="text-align: center">d2</th>
+      <th scope="col" style="text-align: center">d3</th>
+      <th scope="col" style="text-align: center">d4</th>
+      <th scope="col" style="text-align: center">d5</th>
+      <th scope="col" style="text-align: center">prediction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">Company Name : {{this.currentStock.name}}</td>
+      <td> {{this.currentStock.d1}}</td>
+      <td> {{this.currentStock.d2}}</td>
+      <td> {{this.currentStock.d3}}</td>
+      <td> {{this.currentStock.d4}}</td>
+      <td> {{this.currentStock.d5}}</td>
+      <td> {{this.currentStock.price}}</td>
+
+    </tr>
+    <tr>
+      <td colspan="2">Price : </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="2">Currency : </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
