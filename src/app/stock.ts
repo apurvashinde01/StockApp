@@ -1,4 +1,5 @@
 export class Stock {
+    id: number;
     name: string; // Name of the company
     price: number;  // price of stock comma separated value
     d1: number;
@@ -8,4 +9,5 @@ export class Stock {
     currency: string; // score of player
     // industry: string; // stock company's industry
     searchTime: string; // search history time
+    logo: string;
 }
