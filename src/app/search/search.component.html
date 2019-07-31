@@ -23,12 +23,8 @@
   </div>
 </nav>
 
-
-
-
-
 <!--display component-->
-<div class="container-fluid"
+<div    *ngIf="!flag"       class="container-fluid"
 style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)">
 <div class="container">
     <h1 class="display-4">Hello there!</h1>
@@ -37,21 +33,21 @@ style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)
 </div>
 </div>
 
-
+<div *ngIf="flag"> 
 <!--display compnent on search-->
 <table class="table table-bordered" style="margin-bottom: 0px; background-color: rgb(217, 245, 243)">
 <thead>
     <tr>
         <th scope="col" colspan="2" style="text-align: center">
             <!--logo instertion-->
-            <img class="content-image img-fluid d-block mx-auto"src={{this.currentStock.logo}} alt="">
+            <img class="content-image img-fluid d-block mx-auto"src={{this.currentStock.logo}} alt="logo" width="40px" height="40px">
         </th>
-        <th scope="col" style="text-align: center">d1</th>
-        <th scope="col" style="text-align: center">d2</th>
-        <th scope="col" style="text-align: center">d3</th>
-        <th scope="col" style="text-align: center">d4</th>
-        <th scope="col" style="text-align: center">d5</th>
-        <th scope="col" style="text-align: center">prediction</th>
+        <th scope="col" style="text-align: center">Day 1</th>
+        <th scope="col" style="text-align: center">Day 2</th>
+        <th scope="col" style="text-align: center">Day 3</th>
+        <th scope="col" style="text-align: center">Day 4</th>
+        <th scope="col" style="text-align: center">Day 5</th>
+        <th scope="col" style="text-align: center">Prediction</th>
     </tr>
 </thead>
 <tbody>
@@ -84,12 +80,7 @@ style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)
     </tr>
 </tbody>
 </table>
-
-
-
-
-
-
+</div>
 
 <!--
 
