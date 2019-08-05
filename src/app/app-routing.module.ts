@@ -7,12 +7,12 @@ import { StockComponent } from './stock/stock.component';
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: SearchComponent },
-    { path: 'stock', component: StockComponent }
+    { path: 'home/stock/:id', component: StockComponent }
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes), CommonModule],
     exports: [RouterModule],
-    declarations:[]
+    declarations: []
 })
 export class AppRoutingModule { }
