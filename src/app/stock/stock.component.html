@@ -5,7 +5,6 @@
   <thead>
       <tr>
           <th scope="col" colspan="2" style="text-align: center">
-              <!--logo instertion-->
               <img class="content-image img-fluid d-block mx-auto"src={{this.helperService.currentStock.logo}} alt="logo" width="40px" height="40px">
           </th>
           <th scope="col" style="text-align: center">Day 1</th>
@@ -46,6 +45,10 @@
       </tr>
   </tbody>
   </table>
+
+  <div *ngIf="(this.helperService.pastSearches.length) >= 1" class="container-fluid" style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)">
+    <app-search-history></app-search-history>
+  </div>
 
   <app-footer></app-footer>
   

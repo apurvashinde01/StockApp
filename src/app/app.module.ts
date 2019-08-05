@@ -9,6 +9,7 @@ import { StockComponent } from './stock/stock.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { HelperService } from './helper.service';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,6 +20,7 @@ import { HelperService } from './helper.service';
     FooterComponent,
     SearchHistoryComponent,
     StockComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [HelperService],

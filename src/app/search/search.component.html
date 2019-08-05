@@ -13,7 +13,7 @@
           (click)="this.helperService.getStock(stockName.value); stockName.value=''" >Predict</button>
         </a>
       </form>
-      <p style="margin-left: 20px">{{this.helperService.msg}}</p>
+        <p style="margin-left: 20px">{{this.helperService.msg}}</p>
     </div>
 
   </div>
@@ -26,15 +26,4 @@
   </div>
 </nav>
 
-<!--display component-->
-<div    *ngIf="!(this.helperService.flag)"       class="container-fluid"
-style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)">
-<div class="container">
-    <h1 class="display-4">Hello there!</h1>
-    <p class="lead">Keep predicting stocks, we are here to help </p>
-    <button class="uk-button uk-button-default" style="border-color: rgb(55, 67, 241);">Help</button>
-</div>
-<div *ngIf="(this.helperService.search_flag)" class="container" style="padding-bottom: 5%; padding-top: 5%">
-  <app-search-history></app-search-history>
-</div>
-</div>
+

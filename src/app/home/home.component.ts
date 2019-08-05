@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../helper.service';
 
 @Component({
-  selector: 'app-search-history',
-  templateUrl: './search-history.component.html',
-  styleUrls: ['./search-history.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class SearchHistoryComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor(private helperService: HelperService) { }
 

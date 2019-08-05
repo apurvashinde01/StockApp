@@ -1,0 +1,16 @@
+<app-search></app-search>
+
+<!--display component-->
+<div class="container-fluid" style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)">
+  <div class="container">
+    <h1 class="display-4">Hello there!</h1>
+    <p class="lead">Keep predicting stocks, we are here to help </p>
+    <button class="uk-button uk-button-default" style="border-color: rgb(55, 67, 241);">Help</button>
+  </div>
+
+  <div *ngIf="(this.helperService.pastSearches.length) >= 1" class="container-fluid" style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)">
+    <app-search-history></app-search-history>
+  </div>
+</div>
+
+<app-footer></app-footer>
