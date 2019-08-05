@@ -11,6 +11,7 @@
         <button class="uk-button uk-button-default"
           (click)="this.helperService.getStock(stockName.value); stockName.value=''">Predict</button>
       </form>
+      <p style="margin-left: 20px">{{this.helperService.msg}}</p>
     </div>
 
   </div>
@@ -36,13 +37,12 @@ style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)
 </div>
 </div>
 
-<div *ngIf="(this.helperService.flag)"> 
-<!--display compnent on search-->
+<!-- <div *ngIf="(this.helperService.flag)"> 
+
 <table class="table table-bordered" style="margin-bottom: 0px; background-color: rgb(217, 245, 243)">
 <thead>
     <tr>
         <th scope="col" colspan="2" style="text-align: center">
-            <!--logo instertion-->
             <img class="content-image img-fluid d-block mx-auto"src={{this.helperService.currentStock.logo}} alt="logo" width="40px" height="40px">
         </th>
         <th scope="col" style="text-align: center">Day 1</th>
@@ -84,4 +84,4 @@ style="padding-bottom: 5%; padding-top: 5%; background-color: rgb(217, 245, 243)
 </tbody>
 </table>
 
-</div>
+</div> -->

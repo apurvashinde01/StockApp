@@ -1,0 +1,76 @@
+<!--search component-->
+<nav class="uk-navbar-container" uk-navbar style="color: white;  background-color: rgb(55, 67, 241)">
+  <div class="uk-navbar-left">
+    <a href="/">
+      <img src="https://img.icons8.com/pastel-glyph/64/000000/bullish.png"
+        style="margin-left: 30px; margin-right: 40px; height: 40px; width: 40px;">
+    </a>
+    <div class="uk-navbar-item">
+      <form action="javascript:void(0)">
+        <input class="uk-input uk-form-width-medium" type="text" placeholder="STOCK NAME" #stockName>
+        <button class="uk-button uk-button-default"
+          (click)="this.helperService.getStock(stockName.value); stockName.value=''">Predict</button>
+      </form>
+      <p style="margin-left: 20px">{{this.helperService.msg}}</p>
+    </div>
+
+  </div>
+  <div class="uk-navbar-right">
+    <div class="uk-navbar-item">
+      <div>Welcome User</div>
+      <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png"
+        style="margin-left: 30px; margin-right: 20px;">
+    </div>
+  </div>
+</nav>
+
+
+  <!--display compnent on search-->
+  <table class="table table-bordered" style="margin-bottom: 0px; background-color: rgb(217, 245, 243)">
+  <thead>
+      <tr>
+          <th scope="col" colspan="2" style="text-align: center">
+              <!--logo instertion-->
+              <img class="content-image img-fluid d-block mx-auto"src={{this.helperService.currentStock.logo}} alt="logo" width="40px" height="40px">
+          </th>
+          <th scope="col" style="text-align: center">Day 1</th>
+          <th scope="col" style="text-align: center">Day 2</th>
+          <th scope="col" style="text-align: center">Day 3</th>
+          <th scope="col" style="text-align: center">Day 4</th>
+          <th scope="col" style="text-align: center">Day 5</th>
+          <th scope="col" style="text-align: center">Prediction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td colspan="2">Company Name : {{this.helperService.currentStock.name}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td colspan="2">Price : {{this.helperService.currentStock.price}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.d1}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.d2}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.d3}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.d4}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.d5}}</td>
+          <td style="text-align: center">{{this.helperService.currentStock.prediction}}</td>
+      </tr>
+      <tr>
+          <td colspan="2">Currency : {{this.helperService.currentStock.currency}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+  </table>
+
+  <app-footer></app-footer>
+  

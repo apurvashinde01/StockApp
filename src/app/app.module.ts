@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
+import { StockComponent } from './stock/stock.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SearchHistoryComponent } from './search-history/search-history.component';
 import { HelperService } from './helper.service';
+
 
 
 @NgModule({
@@ -16,6 +18,7 @@ import { HelperService } from './helper.service';
     SearchComponent,
     FooterComponent,
     SearchHistoryComponent,
+    StockComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [HelperService],

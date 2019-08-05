@@ -7,11 +7,13 @@ export class HelperService {
   private currentStock: Stock;
   private flag: boolean;
   private search_flag: boolean;
+  private msg: string;
   private pastSearches: Stock[] = new Array();
 
   constructor() { }
 
   getStock(stockName: string): void {
+    this.msg = 'Invalid Stock';
     for (var i = 0; i < STOCK.length; i++) {
       if (STOCK[i].name.toLowerCase() == stockName.toLowerCase()) {
         this.currentStock = STOCK[i];
@@ -21,6 +23,7 @@ export class HelperService {
         this.currentStock.prediction = Math.ceil((this.currentStock.d1 + this.currentStock.d2 + this.currentStock.d3 + this.currentStock.d4 + this.currentStock.d5) / 5);
         this.pastSearches.push(STOCK[i]);
         console.log(this.pastSearches[0]);
+        this.msg = 'Stock Found';
       }
     }
   }
