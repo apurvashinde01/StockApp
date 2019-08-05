@@ -6,6 +6,8 @@ import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SearchHistoryComponent } from './search-history/search-history.component';
+import { HelperService } from './helper.service';
 
 
 @NgModule({
@@ -13,9 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     SearchComponent,
     FooterComponent,
+    SearchHistoryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [HelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
