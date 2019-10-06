@@ -8,7 +8,7 @@ import { HelperService } from '../helper.service';
 })
 export class SearchHistoryComponent implements OnInit {
 
-  constructor(public helperService: HelperService) { }
+  constructor(private helperService: HelperService) { }
 
   ngOnInit() {
   }

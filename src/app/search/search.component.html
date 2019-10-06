@@ -13,8 +13,7 @@
           (click)="this.helperService.getStock(stockName.value); stockName.value=''" >Predict</button>
         </a>
       </form>
-      <img src="{{this.helperService.msg_img}}" style="margin-left: 20px; height: 20px; width: 20px;">
-        <p style="margin-left: 10px; font-weight: 750" [style.color]="this.helperService.msg_flag ? 'green': 'red'">{{this.helperService.msg}}</p>
+        <p style="margin-left: 20px">{{this.helperService.msg}}</p>
     </div>
 
   </div>
